@@ -108,7 +108,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 50px;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .header-contacts-link {
@@ -117,7 +117,7 @@ body {
   text-decoration: none;
   font-weight: 500;
   margin-left: 50px;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .link-icon {
@@ -162,7 +162,6 @@ body {
   background-color: var(--dark-bg-color);
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-bg.jpg);
-  /* background: no-repeat url(../images/hero-bg.jpg); */
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -192,27 +191,27 @@ body {
   font-size: 16px;
   letter-spacing: 0.06em;
   line-height: 1.8;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
   cursor: pointer;
   padding: 10px 32px;
 }
 
-.btn:hover, 
+.btn:hover,
 .btn:focus {
-background-color: var(--brend-color-hover);
+  background-color: var(--brend-color-hover);
 }
 
 .home-overlay {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: rgba(21, 21, 21, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .modal {
@@ -390,7 +389,7 @@ background-color: var(--brend-color-hover);
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -419,7 +418,7 @@ background-color: var(--brend-color-hover);
   border: 1px solid var(--social-color);
   border-radius: 4px;
   fill: var(--social-color);
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .clients-company:hover,
@@ -460,7 +459,7 @@ address {
 .footer-link_color {
   text-decoration: none;
   color: var(--footer-text-color);
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .footer-link_color:hover,
@@ -471,7 +470,7 @@ address {
 .footer-address_color {
   color: var(--light-text-color);
   text-decoration: none;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .footer-social-wrapper {
@@ -524,7 +523,7 @@ address {
   line-height: 1.6;
   padding: 6px 22px;
   cursor: pointer;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .filter-btn:hover,
@@ -550,7 +549,7 @@ address {
 
 .content-item {
   list-style: none;
-  transition: cubic-bezier(0.4, 0, 0.2, 1) .25s;
+  transition: cubic-bezier(0.4, 0, 0.2, 1) 0.25s;
 }
 
 .content-item:hover,
@@ -562,14 +561,11 @@ address {
 .content-link {
   text-decoration: none;
   text-align: left;
-  position: relative;
-  overflow: hidden;
 }
 
 .content-desc {
   border: 1px solid #eeeeee;
   background-color: #fff;
-  z-index: 111;
 }
 
 .content-link h3 {
@@ -590,18 +586,31 @@ address {
   color: var(--second-text-color);
 }
 
-/* .content-overlay {
+.content-overlay-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.content-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #3f51b5;
-  transform: translateX(-100%);
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
   transition: transform 250ms ease;
-  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content-link:hover .content-overlay {
   transform: translatex(0);
-} */
+}
+
+.content-overlay > p {
+  color: var(--light-text-color);
+  font-size: 18px;
+  line-height: 1.55;
+}
