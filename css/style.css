@@ -245,7 +245,8 @@ body {
   right: 8px;
 }
 
-.close::after {
+.close::after,
+.close::before {
   content: '';
   display: block;
   width: 15px;
@@ -258,9 +259,14 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+  transition: .3s;
 }
 
 .close::before {
+  transform: rotate(135deg);
+}
+
+/* .close::before {
   content: '';
   display: block;
   width: 15px;
@@ -273,6 +279,12 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+} */
+
+
+.close:hover::before,
+.close:hover::after {
+  background-color: var(--brend-color);
 }
 
 .is-hidden {
@@ -350,7 +362,35 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
+
 }
+
+.business-item {
+  position: relative;
+}
+
+.business-overlay {
+position: absolute;
+width: 100%;
+height: 70px;
+left: 0;
+bottom: 0;
+background-color: rgba(47, 48, 58, 0.8);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.business-overlay > p{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--light-text-color);
+}
+
+
 
 /* -----------------TEAM----------------- */
 
